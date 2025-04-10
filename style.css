@@ -1,0 +1,131 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* En-tête */
+.header {
+    background-color: #af4c4cd0; /* Couleur de remplissage de l'en-tête */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header__photo img {
+    width: 100px; /* Largeur de l'image */
+    height: 100px; /* Hauteur de l'image */
+    border-radius: 60%; /* Arrondi uniforme (cercle parfait) */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse parfaitement le conteneur */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.543); /* Ombre tout autour de l'image */
+    cursor: zoom-in; /* Indique que l'image peut être zoomée */
+}
+
+.header__photo img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__title {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.header__contact a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #af4c4c9c; /* Couleur de remplissage de l'en-tête */
+    color: white
+    
+}
+
+.header__contact a:hover {
+    text-decoration: underline;
+}
+
+/* Corps principal */
+.main-content {
+    display: flex;
+    margin: 20px;
+}
+
+/* Conteneur gauche */
+.container-left {
+    width: 30%;
+    padding-right: 20px;
+    background-color: #af5e4ce3; /* Même couleur que l'en-tête et le pied de page */
+    color: white; /* Texte en blanc pour contraste */
+}
+
+.container-left .section h2 {
+    background-color: white; /* Isoler les titres avec un fond blanc */
+    color: #af614c96; /* Texte des titres en vert pour correspondre à l'en-tête */
+    padding: 5px;
+    border-radius: 5px;
+    position: relative; /* Pour le positionnement du trait au survol */
+}
+
+.container-left .section h2:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #801500fb; /* Trait bordeaux au survol */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style-type: disc;
+}
+
+/* Conteneur droit */
+.container-right {
+    width: 70%;
+}
+
+.experience,
+.formation,
+.competances {
+    margin-bottom: 20px;
+}
+
+.experience h2,
+.formation h2,
+.competances h2 {
+    position: relative;
+}
+
+.experience h2:hover::before,
+.formation h2:hover::before,
+.competances h2:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #800000;
+}
+
+/* Pied de page */
+.footer {
+    background-color: #af5b4cfc; /* Couleur de remplissage de l'en-tête */
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
+}
